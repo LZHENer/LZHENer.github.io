@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EDM</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="wrapper">
+    <img id="img" onclick="playMusic()" src="react1.png" alt="">
+    <audio id="edm" autoplay src="http://lithii.gotoip2.com/Continious%20Mix%20The%20Mainstage.mp3" loop></audio>
+</div>
+</body>
+<script>
+var edm = document.getElementById('edm');
+// var timeout = setInterval(
+//     function(){
+//         if(edm.paused === false){
+//             edm.play()
+//         };
+//         console.log(11)
+//     },1000
+// );
+// timeout; 
+var img = document.getElementById('img');
+function playMusic(){
+  if(edm.paused === true){
+    edm.play();
+    img.classList = 'rote'
+  }else{
+    edm.pause();
+    img.classList = ''
+  }
+
+};
+window.onload = img.click()
+</script>
+</html>
